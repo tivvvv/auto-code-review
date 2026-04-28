@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public abstract class LLMClientClient implements LLMClient {
+public abstract class AbstractLLMClient implements LLMClient {
 
     protected final String model;
 
@@ -28,7 +28,7 @@ public abstract class LLMClientClient implements LLMClient {
 
     protected final OkHttpClient okHttpClient;
 
-    public LLMClientClient(String model, String apiKey, String baseUrl, String provider) {
+    public AbstractLLMClient(String model, String apiKey, String baseUrl, String provider) {
         this.model = model;
         this.apiKey = apiKey;
         this.baseUrl = baseUrl;
@@ -45,8 +45,6 @@ public abstract class LLMClientClient implements LLMClient {
     @Override
     public String chat(List<Map<String, String>> msgs) {
         try {
-
-
             // 1. 构建请求体
             ObjectNode body = objectMapper.createObjectNode();
             body.put(AutoCodeReviewConstants.MODEL, model);

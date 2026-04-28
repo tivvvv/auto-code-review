@@ -6,6 +6,10 @@ public interface AutoCodeReviewConstants {
 
     String ROLE = "role";
 
+    String SYSTEM = "system";
+
+    String USER = "user";
+
     String CONTENT = "content";
 
     String MESSAGES = "messages";
