@@ -32,4 +32,6 @@ public interface AutoCodeReviewConstants {
 
     String APPLICATION_JSON = "application/json";
 
+    String DEFAULT_LANGUAGE = "default";
+
 }
