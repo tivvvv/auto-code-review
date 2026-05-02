@@ -6,4 +6,6 @@ public interface CodeReviewService {
 
     String detectCodeLanguage(String text);
 
+    int parseCodeReviewScore(String reviewText);
+
 }

@@ -327,4 +327,17 @@ public class CodeReviewServiceImpl implements CodeReviewService {
         return false;
     }
 
+    @Override
+    public int parseCodeReviewScore(String reviewText) {
+        if (reviewText == null || reviewText.isBlank()) {
+            return 0;
+        }
+        Pattern pattern = Pattern.compile("总分:\\s*(\\d+)分?");
+        Matcher matcher = pattern.matcher(reviewText);
+        if (matcher.find()) {
+            return Integer.parseInt(matcher.group(1));
+        }
+        return 0;
+    }
+
 }
