@@ -34,4 +34,10 @@ public interface AutoCodeReviewConstants {
 
     String DEFAULT_LANGUAGE = "default";
 
+    String PROMPT_TEMPLATES_FILE = "prompt_templates.yml";
+
+    String SYSTEM_PROMPT = "system_prompt";
+
+    String USER_PROMPT = "user_prompt";
+
 }
